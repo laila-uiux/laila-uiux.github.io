@@ -3,48 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Laila Arnorsdottir's IST250 Portfolio Site - Coming Soon</title>
-<style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 32px 24px;
-    box-sizing: border-box;
-    background: #05605a;
-    color: #f2fffd;
-    font-family: Georgia, serif;
-  }
-  .tag {
-    font-size: 4.5rem;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    color: #a8dcff;
-    margin: 0 0 12px;
-  }
-  h1 {
-    font-size: 1.8rem;
-    font-weight: normal;
-    margin: 0 0 32px;
-  }
-  img {
-    width: 800px;
-    max-width: 100%;
-    border-radius: 12px;
-  }
-  @media (max-width: 600px) {
-    .tag { font-size: 2.6rem; letter-spacing: 3px; }
-    h1 { font-size: 1.3rem; }
-  }
-</style>
+<title>Laila Arnorsdottir's IST250 Web Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Chewy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <p class="tag">Coming Soon</p>
-  <h1>Laila Arnorsdottir's IST250 Portfolio Site</h1>
-  <img src="hero.jpg" alt="A preview image for Laila Arnorsdottir's upcoming portfolio">
+<div class="wrap">
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="#practice">Practice Activities</a>
+    <a href="#labs">Partner Labs</a>
+    <a href="#individual">Individual</a>
+    <a href="about.html">About Me</a>
+  </nav>
+
+  <header>
+    <h1>Laila's Coding Portfolio</h1>
+    <p class="sub">✿ IST250 ✿ All of the main projects built throughout the semester in HTML, CSS, and JS! ✿</p>
+  </header>
+
+  <h2 id="practice">Practice Activities</h2>
+  <div class="gallery">
+    <a class="card" href="practice-activity-1/index.html">
+      <div class="thumb">
+        <img src="images/practice-activity-1.png" alt="Practice Activity 1 screenshot">
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Practice Activity 1</span>
+    </a>
+    <a class="card" href="practice-activity-2/index.html">
+      <div class="thumb">
+        <img src="images/practice-activity-2.png" alt="Practice Activity 2 screenshot">
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Practice Activity 2</span>
+    </a>
+    <a class="card" href="practice-activity-3/index.html">
+      <div class="thumb">
+        <img src="images/practice-activity-3.png" alt="Practice Activity 3 screenshot">
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Practice Activity 3</span>
+    </a>
+  </div>
+
+  <h2 id="labs">Partner Labs</h2>
+  <div class="gallery">
+    <a class="card" href="partner-lab-1/index.html">
+      <div class="thumb">
+        <img src="images/partner-lab-1.png" alt="Partner Lab 1 screenshot">
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Partner Lab 1</span>
+    </a>
+    <a class="card" href="partner-lab-2/index.html">
+      <div class="thumb">
+        <img src="images/partner-lab-2.png" alt="Partner Lab 2 screenshot">
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Partner Lab 2</span>
+    </a>
+  </div>
+
+  <h2 id="individual">Individual Assignments</h2>
+  <div class="gallery">
+    <a class="card" href="individual-assignment-1/index.html">
+      <div class="thumb">
+        <div class="blank-box">Coming Soon</div>
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Individual Assignment 1</span>
+    </a>
+    <a class="card" href="individual-assignment-2/index.html">
+      <div class="thumb">
+        <img src="images/individual-assignment-2.png" alt="Individual Assignment 2 screenshot">
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Individual Assignment 2</span>
+    </a>
+    <a class="card" href="individual-assignment-3/index.html">
+      <div class="thumb">
+        <img src="images/individual-assignment-3.png" alt="Individual Assignment 3 screenshot">
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Individual Assignment 3</span>
+    </a>
+    <a class="card" href="individual-assignment-4/index.html">
+      <div class="thumb">
+        <img src="images/individual-assignment-4.png" alt="Final project, under construction">
+        <span class="overlay">Take me there!</span>
+      </div>
+      <span class="label">Final Project (coming soon)</span>
+    </a>
+  </div>
+
+  <footer>✿ Made by Laila Arnorsdottir ✿</footer>
+</div>
 </body>
 </html>

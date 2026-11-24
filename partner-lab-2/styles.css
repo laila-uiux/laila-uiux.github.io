@@ -1,0 +1,166 @@
+body {
+    background-color: #f5efe0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2, h3 {
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+}
+
+p { 
+    margin: 0 0 10px;
+}
+
+.content-section {
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.site-header {
+    background-color: #fdfce0;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-navigation ul {
+    display: flex;
+    justify-content: center;
+    gap:12px;
+    list-style: none;
+    padding:0;
+    margin: 20px 0;
+}
+
+main {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "welcome welcome welcome"
+        "focus goal timer"
+        "todo todo board"
+        "cheer cheer cheer";
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.welcome-section {grid-area: welcome;}
+#focus-section {grid-area: focus;}
+#goal-display {grid-area: goal;}
+#timer-section {grid-area: timer;}
+#study-board {grid-area: board;}
+#todo-section {grid-area: todo;}
+#encouragement {grid-area: cheer;}
+
+/*for the cards separating each id/element*/
+
+.content-section, .welcome-section, #goal-display {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #2b2b2b;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08)
+}
+
+h2, h3 {margin-top: 0;}
+
+#customization {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.site-header {color: #2b2b2b}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #2b2b2b;
+    background-color: #e0d4ba;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.main-navigation a:hover {background-color: #d2c3a1; }
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: #8c6a45;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    cursor: pointer;
+}
+
+input[type="text"], select, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border: 2px solid #d9cdb4;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #2b2b2b;
+    box-sizing: border-box;
+    width:100%; 
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #8c6a45
+}
+textarea {resize: vertical}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.customization-card, #focus-form, #todo-form, .board-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.customization-card button, #focus-form button, #todo-form button {
+    align-self: flex-start;
+}
+
+.timer-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.timer-card > label, .timer-card > select,
+.timer-card > h3, .timer-card > p {
+    flex: 0 0 100%;
+    text-align: center;
+}
+#timer-display { font-size: 3rem; margin: 0;}
+
+progress {width: 100%; accent-color: #8c6a45}
+#welcome-body, #site-footer {text-align: center;}
+#site-footer {padding: 20px}
+
+#todo-list li {
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+#todo-list li.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}

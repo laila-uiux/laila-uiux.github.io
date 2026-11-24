@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a href="../index.html" style="display:inline-block;margin:10px;padding:8px 16px;background:#ff5c8a;color:#fff;border:3px solid #000;border-radius:999px;font-family:sans-serif;font-weight:bold;text-decoration:none;">← Back to Portfolio</a>
+
+<header class="site-header">
+    <h1>Study Space</h1>
+    <p>Your personal space to focus and get things done.</p>
+</header>
+
+<h1 id="welcome-header">Welcome In!</h1>
+<p id="welcome-body">Customize your study space below to customize this message into an inspirational quote, reminder, or even a knock-knock joke!</p>
+
+<section id="customization" class="content-section">
+
+    <h2>Customize Your Study Space</h2>
+
+    <p>Make your study board feel like your own!</p>
+
+    <div class="customization-card">
+
+        <label for="welcome-header-input">Your name:</label>
+        <input
+            type="text"
+            id="welcome-header-input"
+            placeholder="Example: Alex"
+        >
+
+        <label for="welcome-body-input">What are you studying today?</label>
+        <input 
+            type="text"
+            id="welcome-body-input"
+            placeholder="Example: Biology chapter 4"
+        >
+
+     <label for="board-theme">Choose a theme:</label>
+
+        <select id="board-theme">
+            <option value="default">Default</option>
+            <option value="pink">Pink</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="green">Green</option>
+            <option value="dark">Dark Mode</option>
+            <option value="beach">Beach</option>
+            </select>
+
+    <button type="button" id="set-welcome-msg-button" onclick="replaceWelcomeAndReminder()">
+            Save my preferences
+        </button>
+    </div>
+ </section>
+
+<nav class="main-navigation">
+    <ul>
+        <li><a href="#focus-section">Focus Goals</a></li>
+        <li><a href="#timer-section">Timer</a></li>
+        <li><a href="#study-board">My Board</a></li>
+        <li><a href="#todo-section">To-do List</a></li>
+    </ul>
+</nav>
+
+<main> 
+
+    <section class="welcome-section">
+        <h2>Welcome to Your Study Space!</h2>
+        <p>Set goals, organize tasks, and stay motivated!</p> 
+        </section> 
+
+        <section id="focus-section" class="content-section">
+            <h2>What Do You Want to Focus On?</h2>
+
+            <p>Choose something you want to accomplish!</p>
+
+            <form id="focus-form">
+                <label for="focus-goal">My Focus Goal:</label>
+                
+                <input 
+                type="text"
+                id="focus-goal"
+                placeholder="Example: Study biology"
+                required
+                >
+            
+                <button type="button" id="set-goal-button">
+                    Set My Goal
+                </button>
+            </form> 
+        </section>
+
+        <div id="goal-display">
+            <h3>My Current Goal</h3>
+            <p id="current-goal">your goal will appear here.</p>
+        </div>
+
+    <section id="timer-section" class="content-section">
+        <h2>Focus Timer</h2>
+
+        <p>Set aside time to focus on your goal.</p>
+
+        <div class="timer-card">
+            <label for="focus-duration">Choose your time:</label>
+
+        <select id="focus-duration">
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="45">45 minutes</option>
+            <option value="60" selected>60 minutes</option>
+        </select>
+        
+        <h3 id="timer-display">60:00</h3>
+
+        <p id="timer-status">Ready to focus?</p>
+        
+        <button type ="button"  id="start-timer">
+            Start 
+        </button>
+        
+        <button type="button" id="pause-timer">
+            Pause 
+        </button>
+
+        <button type="button" id="reset-timer">
+            Reset
+        </button>
+    </div>
+    </section>
+
+<section id="study-board" class="content-section">
+
+    <h2>My Study Board</h2>
+
+    <p>Your personal space for notes and inspiration.</p>
+
+    <div class="board-card">
+
+        <h3 id="board-content">My Study Space</h3>
+
+        <label for="personal-notes">My Notes:</label>
+
+        <textarea
+             id="personal-notes"
+             rows="6"
+             placeholder="Write your notes or ideas here..."
+        ></textarea>
+
+        <p id="motivation-message">
+            You can do this! One step at a time. 
+        </p>
+
+    </div>
+</section>
+
+
+<section id="todo-section" class="content-section">
+
+    <h2>My To-Do List</h2>
+
+            <div class="todo-card">
+
+                <div id="task-progress">
+
+                    <p> 
+                        Completed:
+                        <span id="completed-count">0</span>
+                        of 
+                        <span id="total-count">0</span>
+                        tasks
+                    </p>
+
+                    <progress
+                        id="task-progress-bar"
+                        value="0"
+                        max="100"
+                    ></progress>
+
+                    <p id="progress-message">
+                        Let's get started!
+                    </p>
+                    </div>
+
+                    <form id="todo-form">
+
+                        <label for="todo-input">Add a task:</label>
+
+                        <input
+                           type="text"
+                           id="todo-input"
+                           placeholder="What do you need to do?"
+                           required 
+                        >
+                        
+                        <label for="task-category">Category:</label>
+
+                        <select id="task-category">
+                            <option value="school">School</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="other">Other</option>
+                        </select>
+                        
+                        <div class="button-row">
+                            <button type="button" id="add-task">
+                            Add task
+                            </button>
+
+                            <button type="button" id="clear-completed">
+                            Clear Completed Tasks
+                            </button>
+                        </div>
+                        </form>
+
+                    <ol id="todo-list"></ol>
+
+                </div>
+                </section>
+
+                    <section id="encouragement" class="content-section">
+
+                        <h2>You've Got This!</h2>
+
+                        <p>Every session counts!</p>
+                        
+                        </section> 
+                        
+    </main>
+
+    <footer id="site-footer">
+        <p>&copy; 2026 Study Space. Stay focused and keep growing!</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    </body>
+</html>
+                    

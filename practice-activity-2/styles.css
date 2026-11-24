@@ -1,0 +1,290 @@
+body {
+    font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+    margin: 0;
+    color: #0a4a6e;
+    /* One photo for the whole backdrop */
+    background-color: #7cc8ff;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 270px 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "sidebar c1 c1"
+        "sidebar c2 c3"
+        "footer footer footer";
+    gap: 15px;
+    padding: 15px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* ---------- Shared see-through glass look ---------- */
+header, aside, section, footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 60, 120, 0.35), inset 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+h1, h2, p {
+    margin-top: 0;
+}
+
+/* ---------- Layout sections ---------- */
+header {
+    grid-area: header;
+    background-color: rgba(60, 170, 240, 0.5);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 60, 100, 0.6);
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+.content1 {
+    grid-area: c1;
+}
+
+.content2 {
+    grid-area: c2;
+}
+
+.content3 {
+    grid-area: c3;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgba(60, 170, 240, 0.5);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 60, 100, 0.6);
+    font-style: italic;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ---------- Sidebar: timeline ---------- */
+.timeline {
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 15px;
+    border-left: 4px solid #1aa7e8;
+    text-align: left;
+}
+
+.timeline li {
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline strong {
+    color: #0b6fb8;
+}
+
+/* Transform 1: timeline entries slide to the right */
+.timeline li:hover {
+    transform: translateX(8px);
+}
+
+/* ---------- Content 1: bubbles bouncing around the box ---------- */
+.bubble-box {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background-color: #1aa7e8;
+    background-image: url("images/bubble-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Each bubble moves left-right and up-down at different speeds, so it bounces off the walls */
+.bubble {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    animation-name: bounce-x, bounce-y;
+    animation-duration: 7s, 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.bubble:nth-child(2) {
+    animation-duration: 9s, 6s;
+    animation-delay: -2s, -1s;
+}
+
+.bubble:nth-child(3) {
+    animation-duration: 6s, 8s;
+    animation-delay: -4s, -3s;
+}
+
+.bubble:nth-child(4) {
+    animation-duration: 11s, 7s;
+    animation-delay: -6s, -2s;
+}
+
+.bubble:nth-child(5) {
+    animation-duration: 8s, 10s;
+    animation-delay: -1s, -5s;
+}
+
+.bubble:nth-child(6) {
+    animation-duration: 10s, 9s;
+    animation-delay: -7s, -4s;
+}
+
+/* ---------- Content 2: ocean with leaping dolphins ---------- */
+.ocean {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.ocean h2 {
+    position: relative;
+    z-index: 3;
+}
+
+.water {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+    object-position: top;
+    z-index: 2;
+}
+
+/* Filters 1 and 2: saturate + drop-shadow */
+.dolphin {
+    position: absolute;
+    bottom: 35%;
+    width: 200px;
+    z-index: 1;
+    filter: saturate(130%) drop-shadow(0px 4px 4px rgba(0, 60, 100, 0.4));
+    animation-name: leap;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.d1 {
+    left: 5%;
+}
+
+.d2 {
+    left: 45%;
+    animation-delay: 2s;
+}
+
+/* ---------- Content 3: aquarium with tropical fish ---------- */
+.aquarium-box {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background-color: #5cc8e8;
+    background-image: url("images/aquarium-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Filters: saturate + drop-shadow */
+.fish {
+    position: absolute;
+    width: 90px;
+    filter: saturate(130%) drop-shadow(0px 4px 4px rgba(0, 60, 100, 0.4));
+    animation-name: swim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.f1 {
+    top: 12%;
+    animation-duration: 14s;
+}
+
+.f2 {
+    top: 42%;
+    animation-duration: 18s;
+    animation-delay: -6s;
+}
+
+.f3 {
+    top: 66%;
+    width: 70px;
+    animation-duration: 11s;
+    animation-delay: -3s;
+}
+
+/* Transform: the fish tilts and grows, and its color shifts */
+.fish:hover {
+    transform: rotate(-12deg) scale(1.25);
+    filter: saturate(160%) hue-rotate(80deg) drop-shadow(0px 4px 4px rgba(0, 60, 100, 0.4));
+}
+
+/* ---------- Animation: dolphins leap out of the water ---------- */
+@keyframes leap {
+    0% {
+        transform: translate(0px, 120px) rotate(-55deg);
+    }
+    50% {
+        transform: translate(100px, -95px) rotate(0deg);
+    }
+    100% {
+        transform: translate(170px, 120px) rotate(55deg);
+    }
+}
+
+/* Animation: bubbles bounce left-right and up-down (80px = bubble width) */
+@keyframes bounce-x {
+    from {
+        left: 0px;
+    }
+    to {
+        left: calc(100% - 80px);
+    }
+}
+
+@keyframes bounce-y {
+    from {
+        top: 0px;
+    }
+    to {
+        top: calc(100% - 80px);
+    }
+}
+
+/* Animation: fish swim across the aquarium */
+@keyframes swim {
+    from {
+        left: -100px;
+    }
+    to {
+        left: 100%;
+    }
+}

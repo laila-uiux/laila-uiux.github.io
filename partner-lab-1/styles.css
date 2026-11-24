@@ -1,0 +1,106 @@
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 0;
+    background-color: #f3f6ee;
+    color: #333333;
+}
+
+h1 {
+    font-family: 'Shrikhand', Georgia, serif;
+    color: #fafafa;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: 'Shrikhand', Georgia, serif;
+    color: #2f5d3a;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.site-header {
+    background-color: #2f5d3a;
+    color: #f3f6ee;
+    text-align: center;
+    padding: 20px;
+}
+
+.site-title {
+    color: #f3f6ee;
+    margin: 0;
+}
+ 
+.main-nav {
+    list-style: none;
+    padding: 0;
+}
+ 
+.main-nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+    color: #d9d9d9;
+}
+
+.main-nav a:hover {
+    color: #e9b949;
+}
+
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;     
+    padding: 20px;
+    overflow: auto;     
+}
+
+.float-box {
+    float: right;
+    width: 600px;
+    margin: 0 0 20px 20px;
+    border: 4px solid #e9b949;
+    padding: 10px;
+}
+ 
+.float-box img {
+    width: 100%;
+}
+
+.info-box {
+    clear: both;         /* starts below the floated image */
+    background-color: #dfe8d3;
+    padding: 15px;
+    margin: 20px 0;
+}
+ 
+.highlight {
+    background-color: #e9b949;
+}
+ 
+.button {
+    background-color: #2f5d3a;
+    color: #f3f6ee;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+ 
+.button:hover {
+    background-color: #e9b949;
+    color: #2f5d3a;
+}
+
+site-footer {
+    background-color: #2f5d3a;
+    color: #f3f6ee;
+    text-align: center;
+    padding: 10px;
+}

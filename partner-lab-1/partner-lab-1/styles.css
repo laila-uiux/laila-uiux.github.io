@@ -1,0 +1,185 @@
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 0;
+    background-color: #f3f6ee;
+    color: #333333;
+}
+
+h1 {
+    font-family: 'Shrikhand', Georgia, serif;
+    color: #fafafa;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: 'Shrikhand', Georgia, serif;
+    color: #2f5d3a;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+p {
+    margin: 0px 20px;
+}
+
+table {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+td {
+    border: 3px solid #333;
+    padding: 20px;
+    width: 140px;
+    height: 120px;
+    margin: 0 auto;
+    margin-right: 2px;
+    display: inline-block;
+    text-align: center;
+    font-size: 15pt;
+}
+
+th {
+    font-size: 15pt;
+}
+
+.spring {
+    background-color: #fccae7;
+    margin: 5px;
+}
+.summer {
+    background-color: #faf2b9;
+    margin: 5px;
+}
+.fall {
+    background-color: #fa9f78;
+    margin: 5px;
+}
+.winter {
+    background-color: #9ac2fc;
+    margin: 5px;
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.steps {
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.secondary-h3 {
+    margin: 0 auto;
+    max-width: 800px;
+    font-family: Georgia, 'Times New Roman', serif;
+    margin-bottom: 20px;
+    letter-spacing: 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+
+.site-header {
+    background-color: #2f5d3a;
+    color: #f3f6ee;
+    text-align: center;
+    padding: 20px;
+}
+
+.site-title {
+    color: #f3f6ee;
+    margin: 0;
+}
+ 
+.main-nav {
+    list-style: none;
+    padding: 0;
+}
+ 
+.main-nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+    color: #d9d9d9;
+}
+
+.main-nav a:hover {
+    color: #e9b949;
+}
+
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;     
+    padding: 20px;
+    overflow: auto;    
+}
+
+.caption {
+    text-align: center;
+}
+
+.float-box {
+    float: right;
+    width: 600px;
+    margin: 0 0 20px 20px;
+    border: 4px solid #e9b949;
+    padding: 10px;
+}
+ 
+.float-box img {
+    width: 100%;
+}
+
+#garden-10 {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.info-box {
+    clear: both;         /* starts below the floated image */
+    background-color: #dfe8d3;
+    padding: 15px;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.highlight {
+    background-color: #e9b949;
+}
+ 
+.button {
+    background-color: #2f5d3a;
+    color: #f3f6ee;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 20px;
+
+}
+ 
+.button:hover {
+    background-color: #e9b949;
+    color: #2f5d3a;
+}
+
+.site-footer {
+    background-color: #2f5d3a;
+    color: #f3f6ee;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Laila's Photo Album: nature and landscape photography from Washington and Wisconsin.">
+    <title>Laila's Photo Album</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      /* ---------- Color palette ---------- */
+      :root {
+        --lavender: #d9ccf0;
+        --purple: #8e6bbf;
+        --deep-purple: #5b3f8c;
+        --pink: #f6c9dd;
+        --deep-pink: #c75b94;
+        --blush: #f8f0fb;
+      }
+
+      /* ---------- Header ---------- */
+      .bg-purple {
+        background-color: var(--purple);
+      }
+      .bg-deep-purple {
+        background-color: var(--deep-purple);
+      }
+
+      /* ---------- Hero ---------- */
+      .hero h1 {
+        color: var(--deep-purple);
+      }
+      .hero .lead {
+        color: #6f6486;
+      }
+
+      /* ---------- Buttons ---------- */
+      .btn-purple {
+        background-color: var(--purple);
+        border-color: var(--purple);
+        color: #fff;
+      }
+      .btn-purple:hover {
+        background-color: var(--deep-purple);
+        border-color: var(--deep-purple);
+        color: #fff;
+      }
+      .btn-pink {
+        background-color: var(--pink);
+        border-color: var(--pink);
+        color: var(--deep-purple);
+      }
+      .btn-pink:hover {
+        background-color: var(--deep-pink);
+        border-color: var(--deep-pink);
+        color: #fff;
+      }
+      .btn-outline-purple {
+        color: var(--purple);
+        border-color: var(--purple);
+      }
+      .btn-outline-purple:hover {
+        background-color: var(--purple);
+        color: #fff;
+      }
+
+      /* ---------- Gallery ---------- */
+      .album {
+        background-color: var(--blush);
+      }
+      .card {
+        border: 2px solid var(--lavender);
+        background-color: #fff;
+      }
+      .card-title {
+        color: var(--deep-purple);
+      }
+      .card-img-top {
+        height: 225px;
+        object-fit: cover; /* crops photos to the same size without stretching */
+      }
+
+      /* ---------- Footer ---------- */
+      footer {
+        color: #6f6486;
+      }
+      footer a {
+        color: var(--deep-pink);
+      }
+      footer a:hover {
+        color: var(--deep-purple);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html" style="display:inline-block;margin:10px;padding:8px 16px;background:#ff5c8a;color:#fff;border:3px solid #000;border-radius:999px;font-family:sans-serif;font-weight:bold;text-decoration:none;">← Back to Portfolio</a>
+
+<header>
+  <div class="collapse bg-deep-purple" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-white">Laila's Photo Album is a collection of nature and landscape photographs from the Pacific Northwest and Wisconsin: sunsets on the water, mountain light, winter branches, and the occasional bird. Each photo is a small moment of patience.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Instagram</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-purple shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>Laila's Photo Album</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Nature & Landscape Photography</h1>
+        <p class="lead">Six moments from Tacoma, Seattle, and Wausau, from glowing sunsets to snowy peaks. Take a look through the album below.</p>
+        <p>
+          <a href="#gallery" class="btn btn-purple my-2">View the album</a>
+          <a href="#" class="btn btn-pink my-2" data-bs-toggle="collapse" data-bs-target="#navbarHeader">About the photographer</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5" id="gallery">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/image1.jpg" class="card-img-top" alt="The sun setting over the water with golden light and a wave splashing in the foreground">
+            <div class="card-body">
+              <h5 class="card-title">Tacoma Sunset</h5>
+              <p class="card-text">Golden light spills across the water as a wave breaks along the shore at sunset.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="images/image1.jpg" class="btn btn-sm btn-outline-purple">View larger</a>
+                </div>
+                <small class="text-muted">Tacoma, WA</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/image2.jpg" class="card-img-top" alt="The Tacoma Narrows Bridge across the water with old wooden pilings and a train passing along the shore">
+            <div class="card-body">
+              <h5 class="card-title">Evening at Titlow</h5>
+              <p class="card-text">Old wooden pilings stand in the water as a train rolls past under the Narrows Bridge in the warm evening light.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="images/image2.jpg" class="btn btn-sm btn-outline-purple">View larger</a>
+                </div>
+                <small class="text-muted">Titlow Park, University Place</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/image3.jpg" class="card-img-top" alt="Bare tree branches covered in bright red berries against a deep blue winter sky">
+            <div class="card-body">
+              <h5 class="card-title">Winter Berries</h5>
+              <p class="card-text">Bright red berries dot the bare branches, a pop of color against a clear blue winter sky.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="images/image3.jpg" class="btn btn-sm btn-outline-purple">View larger</a>
+                </div>
+                <small class="text-muted">Wausau, WI</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/image4.jpg" class="card-img-top" alt="The snowy summit of Mount Rainier glowing pink in the evening light">
+            <div class="card-body">
+              <h5 class="card-title">Rainier Dusted at Dusk</h5>
+              <p class="card-text">Mount Rainier's snowy slopes glow soft rose as the last light of the evening touches the summit.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="images/image4.jpg" class="btn btn-sm btn-outline-purple">View larger</a>
+                </div>
+                <small class="text-muted">Seattle, WA</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/image5.jpg" class="card-img-top" alt="Mount Rainier rising above wispy clouds under a fiery orange and purple sunset sky with two birds flying">
+            <div class="card-body">
+              <h5 class="card-title">Birds Fly by Mt. Rainier at Sunset</h5>
+              <p class="card-text">Two birds cross a sky of orange and violet clouds while Mount Rainier rises quietly below.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="images/image5.jpg" class="btn btn-sm btn-outline-purple">View larger</a>
+                </div>
+                <small class="text-muted">Seattle, WA</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/image6.jpg" class="card-img-top" alt="A robin standing in bright green grass with its beak open">
+            <div class="card-body">
+              <h5 class="card-title">Robin on a Summer Day</h5>
+              <p class="card-text">A robin pauses in the sunny grass, mid-song, with its orange breast catching the light.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="images/image6.jpg" class="btn btn-sm btn-outline-purple">View larger</a>
+                </div>
+                <small class="text-muted">Summer Afternoon</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">2026 Laila's Photo Album. All photographs are my own.</p>
+    <p class="mb-0">Built with Bootstrap 5.1 for Lesson 9 Practice Activity 3.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
